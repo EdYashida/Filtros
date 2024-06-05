@@ -1,1 +1,25 @@
+#Filtros iniciais CG
 
+**Separação de canais RGB**
+
+O script se baseia na aquisição dos valores da altura e largura de uma imagem para a criação de 3 novas imagens com os mesmos valores(uma para cada canal RGB). Após isso, os pixels da imagem inicial são percorridos e seus valores de verde, vermelho e azul são atribuídos cada um para cada imagem antes criada. Por fim as imagens que constam somente um dos 3 canais são exibidas.
+
+**RBG para cinza**
+
+O script cria uma nova imagem baseada na conversão de cores da iamgem original utilizando a função *cvtColor* da bilbioteca *openCV* e com o parâmetro *cv2.COLOR_BGR2GRAY*
+
+**Cinza para binário**
+O script inicia convertendo uma imagem RGB para cinza. Em seguida os valores de altura e largura da imagem são adquiros e um limite é definido, esse determina o valor limite para determinar se um pixel será "transcrito" para branco ou preto de acordo com o valor que ele apresenta.
+Em seguida, os pixels da imagem são percorridos e de seus valores são analisados, de modo que a cada pixel visitado, um novo pixel branco ou preto é atribuído à nova imagem binarizada.
+
+**Média**
+O script converte a imagem inicial para cinza e cria uma nova imagem com o mesmo tamanho. A seguir, os pixels da imagem inicial são percorridos, de modo a sempre considerar os 8 pixels ao seu redor, assim somando os valores desses 9 pixels e dividindo por 9, desse modo conseguindo o valor médio entre esses e adicionando esse novo pixel à imagem criada posteriormente.
+
+**Mediana**
+O script se assemelha muito com o anterior, entretanto a diferença está na hora de atribuir valor aos pixels que compoem. Nesse caso é criado um array que mantém os valores do pixel que está sendo visitado e dos 8 vizinhos que os rondam, após os 9 serem visitados e terem seus valores armazenados no array, esse é ordenado e o valor presente na quinta posição( o valor que está no "meio") é atribuído ao pixel correspondente na imagem nova.
+
+**Roda 90**
+O script se baseia na utilizção da função *rotate* do *cv2*, essa é simplesmente aplicada à 2 imagens criadas a partir de uma inicial, aplicando tal função com paramêtros para rodar a imagem em sentido horário e anti horário.
+
+**Inverter**
+O script em questão aplica a função *flip* do *OpenCV* com parâmetro "1" para inverter o sentido da imagem.
