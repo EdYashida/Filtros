@@ -1,0 +1,17 @@
+from PIL import Image
+
+# Abra a imagem
+img = Image.open("Filtros/images/Thorfinn.jpg")
+
+# Separe a imagem nos canais R, G e B
+r, g, b = img.split()
+
+# Crie novas imagens para cada canal definindo os outros canais para zero
+img_r = Image.merge("RGB", (r, Image.new("L", img.size), Image.new("L", img.size)))
+img_g = Image.merge("RGB", (Image.new("L", img.size), g, Image.new("L", img.size)))
+img_b = Image.merge("RGB", (Image.new("L", img.size), Image.new("L", img.size), b))
+
+
+img_r.show()
+img_g.show()
+img_b.show()

@@ -1,0 +1,16 @@
+from PIL import Image
+import cv2
+import numpy as np
+
+
+img_pil = Image.open("Filtros/images/Thorfinn.jpg")
+
+
+img_np = np.array(img_pil)
+
+
+img_bgr = cv2.cvtColor(img_np, cv2.COLOR_RGB2BGR)
+img_rotated = cv2.rotate(img_bgr, cv2.ROTATE_90_CLOCKWISE)
+img_rotated_rgb = cv2.cvtColor(img_rotated, cv2.COLOR_BGR2RGB)
+img_rotated_pil = Image.fromarray(img_rotated_rgb)
+img_rotated_pil.show()

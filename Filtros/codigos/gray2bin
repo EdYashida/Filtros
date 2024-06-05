@@ -1,0 +1,23 @@
+from PIL import Image
+import cv2
+import numpy as np
+
+# Carregar a imagem usando PIL
+img_pil = Image.open("Filtros/images/Thorfinn.jpg")
+
+# Converter a imagem PIL para um array NumPy
+img_np = np.array(img_pil)
+
+# Converter a imagem de RGB para BGR
+img_bgr = cv2.cvtColor(img_np, cv2.COLOR_RGB2BGR)
+
+# Converter a imagem para tons de cinza usando OpenCV
+gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+
+# Definir um threshold e aplicar a binarização
+threshold = 165
+_, bin_img_np = cv2.threshold(gray, threshold, 255, cv2.THRESH_BINARY)
+
+# Converter a imagem binarizada de volta para PIL
+bin_img = Image.fromarray(bin_img_np)
+bin_img.show()
