@@ -1,11 +1,11 @@
 
-#Processamento de Imagens com Python
+#  Processamento de Imagens com Python
 
 Este repositório contém exemplos de código para manipulação e processamento de imagens usando as bibliotecas Pillow (PIL) e OpenCV. Abaixo está uma descrição dos algoritmos implementados e o que cada código faz.
 
-##Algoritmos
+##  Algoritmos
 
-###1-separacaorgb
+###  1-separacaorgb
 Este algoritmo implementa a separação dos canais RGB (vermelho, verde e azul) de uma imagem usando a biblioteca Pillow (PIL).
 Após a abertura e separação dos canais rgb com o método split(), são criadas novas imagens para cada canal,Novas imagens são criadas para cada canal de cor. 
 Para destacar um canal específico, os outros dois canais são definidos como zero. Isto é feito usando Image.new("L", img.size), que cria uma nova imagem em escala de cinza (luminância) do mesmo tamanho com todos os pixels definidos para zero.
