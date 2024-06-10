@@ -1,1 +1,9 @@
 
+# Processamento de Imagens com Python
+
+Este repositório contém exemplos de código para manipulação e processamento de imagens usando as bibliotecas Pillow (PIL) e OpenCV. Abaixo está uma descrição dos algoritmos implementados e o que cada código faz.
+
+## Algoritmos
+
+### 1. Filtro de Mediana
+Este algoritmo aplica um filtro de mediana a uma imagem em tons de cinza. O filtro de mediana é utilizado para reduzir o ruído em uma imagem, substituindo cada pixel pelo valor da mediana dos pixels vizinhos em uma janela de tamanho 3x3.
