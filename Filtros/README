@@ -32,4 +32,11 @@ Este algoritmo aplica um filtro de mediana a uma imagem em escala de cinza usand
 Novamente, os mesmos processos são novamente replicados de início e um filtro de mediana é aplicado usando cv2.medianBlur(gray, 3). 
 Este filtro substitui cada pixel pelo valor mediano dos pixels vizinhos em uma janela de 3x3, reduzindo o ruído enquanto preserva as bordas.
 
-### 
+###6- Girar imagem 90º
+Este algoritmo rotaciona uma imagem em 90 graus no sentido horário usando as bibliotecas Pillow (PIL) e OpenCV.
+(processos antes citados...) e então a função cv2.rotate(img_bgr, cv2.ROTATE_90_CLOCKWISE) é usada para rotacionar a imagem em 90 graus no sentido horário.
+
+###7- Inverter imagem
+Este algoritmo inverte uma imagem horizontalmente usando as bibliotecas Pillow (PIL) e OpenCV.
+(processos antes citados...) e então a função cv2.flip(img_bgr, 1) é usada para inverter a imagem horizontalmente. 
+O parâmetro 1 especifica a inversão horizontal, caso fosse utilizado o parâmetro 0, a inversão seria vertical.
